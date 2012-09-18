@@ -1,3 +1,74 @@
+/*Begin styles for example usage of plugin */
+
+#pedal { 
+  position:relative; 
+  height:442px; 
+  width:524px;
+  background:#66ffcc ;
+  margin:20px auto;
+}
+
+.hottip-hot { 
+  background:#800000 !important; 
+}
+
+.hottip-parent-hot { }
+
+.hottip-group1 { 
+  position:absolute; 
+  height:58px; 
+  width:58px; 
+  z-index:2;
+  background:url('../images/hotspot.png') center center no-repeat !important; 
+  cursor: pointer;
+}
+
+a.hottip-group1:hover {
+
+}
+
+#pedal .hottip-background {
+  position:absolute;
+  z-index:1;
+  height:442px;
+  width:524px;
+}
+
+#pedal .hottip-background-cold {
+  background: url('../images/pedal1.png') center center no-repeat;    
+}
+
+#pedal .hottip-background-hot {
+  background: url('../images/pedal2.png') center center no-repeat;    
+}
+
+.hottiptooltip { 
+  position:absolute; 
+  background:#72b7ff; 
+  z-index:2; 
+  font-size:13px; 
+  width:150px; 
+  height:70px; 
+  padding:7px; 
+  border-radius: 5px; 
+  text-align: justify; 
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.8); 
+  font-family: arial, sans-serif;
+}
+
+/*these ids are the tool tip buttons*/
+#hottiptooltip1 { left:5px; top:40px;}
+#hottiptooltip2 { left:90px; top:330px;}
+#hottiptooltip3 {width:215px; height:80px; left:265px; top:60px;}
+
+/*these boxes are the tool tips themselves*/
+#box1 { left:50px; top:130px;}
+#box2 { left:140px; top:270px;}
+#box3 { left:350px; top:180px;}
+
+/*End styles for plugin example */
+
+
 /* http://sonspring.com/journal/clearing-floats */
 .clear {
   clear: both;
@@ -59,25 +130,25 @@ h6 {
 }
 h1 {
   font-size: 225%;
-  line-height: 1.3334em;
-  margin: 0 0 .1666em;
+  line-height: 1.3em;
+  margin: 0 0 .2em;
 }
 h2 {
   font-size: 175%;
-  line-height: 1.28571429em;
-  margin: 0 0 .35714286em;
+  line-height: 1.3em;
+  margin: 0 0 .4em;
 }
 h3 {
-  font-size: 137.5%;
-  line-height: 1.3636em;
+  font-size: 135%;
+  line-height: 1.4em;
   margin: 0 0 .5em;
 }
 h4,
 h5,
 h6 {
-  font-size: 112.5%;
-  line-height: 1.3334em;
-  margin: 0 0 .7778em;
+  font-size: 112%;
+  line-height: 1.3em;
+  margin: 0 0 .7em;
 }
 ol,
 ul {
@@ -103,7 +174,7 @@ blockquote {
   padding: 0 1.5em 0 1.4em;
 }
 code {
-  font: normal normal 87.5%/1.71428571em monospace, sans-serif;
+  font: normal normal 87.5%/1.7em monospace, sans-serif;
   background: #eee;
 }
 img {
@@ -112,8 +183,8 @@ img {
 }
 pre {
   display: block;
-  font: normal normal 87.5%/1.71428571em monospace, sans-serif;
-  padding: 0.857142855em 1.71428571em;
+  font: normal normal 87.5%/1.7em monospace, sans-serif;
+  padding: 0.857142855em 1.7em;
   background: #eee;
   display: block;
   overflow: auto;
@@ -127,7 +198,7 @@ td,
 th {
   border: solid .1em #eee;
   font-size: 87.5%;
-  line-height: 1.71428571em;
+  line-height: 1.7em;
   text-align: left;
   padding: 5px 10px;
   font-weight: normal;
@@ -140,7 +211,7 @@ th:last-child {
   border-right: 1px solid #eee;
 }
 td.green {
-  background: #a7b559;
+  background: #408000;
   color: #fff;
 }
 td.red {
@@ -178,7 +249,7 @@ figcaption {
 /* = Custom Stylings = */
 /* =================== */
 header {
-  padding-left: 130px;
+  text-align: center;
   margin-bottom: 2em;
 /*  background: url(../images/logo.png) top left no-repeat;
 */}

@@ -7,52 +7,6 @@
 			var justName = offElement.substr(1);
 			var theElement = document.getElementById(justName)
 
-			// remove all this touch stuff
-
-		    try {
-		    	document.createEvent('TouchEvent');
-		    	return;
-		    } catch (e) {}
-
-		    var eventMap = {
-		    	'mousedown': 'touchstart',
-		    };
-
-		    window.addEventListener("load", function () {
-		    	for (var key in eventMap) {
-		    		theElement.addEventListener(key, function (e) {
-		    			var event = createTouchEvent(eventMap[e.type], e);
-		    			e.target.dispatchEvent(event);
-		    			var fn = e.target['on' + eventMap[e.type]];
-		    			if (typeof fn === 'function') fn(e);
-		    		}, true);
-		    	}
-		    }, false);
-		    var createTouchEvent = function (name, e) {
-		    	var event = document.createEvent('MouseEvents');
-
-		    	event.initMouseEvent(
-		    	name,
-		    	e.bubbles,
-		    	e.cancelable,
-		    	e.view,
-		    	e.detail,
-		    	e.screenX,
-		    	e.screenY,
-		    	e.clientX,
-		    	e.clientY,
-		    	e.ctrlKey,
-		    	e.altKey,
-		    	e.shiftKey,
-		    	e.metaKey,
-		    	e.button,
-		    	e.relatedTarget);
-
-		    	return event;
-		    };
-
-		    // end touch
-
 		},
 		closeToolTips : function (whatToolTips, how) {
 			// whatToolTips must be an array of tooltip ids
@@ -94,7 +48,7 @@
 		$hotClass = settings.hotSpotHitSelector;  // redundant remove
 
 
-		var eventHandler = "touchstart";
+		var eventHandler = "click";
 		//you dont need a library for a default JS touch event. TODO clean
 
 		// this array will contain all the IDs for the hot spot elements

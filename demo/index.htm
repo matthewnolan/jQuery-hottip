@@ -4,58 +4,10 @@
 <meta charset=utf-8>
 <title>jQuery hotTip</title>
 
-
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="../js/jquery-hottip.js"></script>
 <link media="screen" rel="stylesheet" type="text/css" href="assets/css/style.css">
 
-<style>
-
-	.hottip-hot { background:#800000 !important; }
-
-	.hottip-parent-hot { }
-
-	#pedal { 
-		position:relative; 
-		height:442px; 
-		width:524px;
-		background:#66ffcc ;
-		margin:20px auto;
-	}
-	.hottip-parent-hot { }
-
-	.hottip-group1 { position:absolute; height:58px; width:58px; z-index:2;
-		background:url('assets/images/hotspot.png') center center no-repeat !important; 
-		cursor: pointer;
-	}
-	a.hottip-group1:hover {
-	
-	}
-
-	#pedal .hottip-background {
-		position:absolute;
-		z-index:1;
-		height:442px;
-		width:524px;
-	}
-	#pedal .hottip-background-cold {
-		background: url('assets/images/pedal1.png') center center no-repeat; 		
-	}
-	#pedal .hottip-background-hot {
-		background: url('assets/images/pedal2.png') center center no-repeat; 		
-	}
-	.hottiptooltip { position:absolute; background:#72b7ff; z-index:2; font-size:13px; width:150px; height:70px; padding:7px; border-radius: 5px; text-align: justify; box-shadow: 1px 1px 2px rgba(0,0,0,0.8); font-family: arial, sans-serif;}
-
-	/*these ids are the tool tip buttons*/
-	#hottiptooltip1 { left:5px; top:40px;}
-	#hottiptooltip2 { left:90px; top:330px;}
-	#hottiptooltip3 {width:215px; height:80px; left:265px; top:60px;}
-
-	/*these boxes are the tool tips themselves*/
-	#box1 { left:50px; top:130px;}
-	#box2 { left:140px; top:270px;}
-	#box3 { left:350px; top:180px;}
-</style>
 </head>
 <body>
 
@@ -65,8 +17,8 @@
 </header>
 
 <div id="buttons" class="clearfix">
-<!-- 	<a href="#">Download</a>
-	<a href="#">Github</a> -->
+	<a href="https://github.com/matthewnolan/jQuery-hottip/zipball/master">Download</a>
+	<a href="https://github.com/matthewnolan/jQuery-hottip" target="_blank">Github</a>
 </div>
 
 <section id="overview">
@@ -76,7 +28,7 @@
 
 <figure id="pedal">
 	<div class="hottiptooltip" id="hottiptooltip1">This is the Overdrive Knob. The more of this you use, the better your music will be.</div>
-	<div class="hottiptooltip" id="hottiptooltip2">tip2</div>
+	<div class="hottiptooltip" id="hottiptooltip2">Check the source for DOM structure.</div>
 	<div class="hottiptooltip" id="hottiptooltip3">The hot spots can be any size and absolutely positioned anywhere. </div>
 
 	<div class="hottip-group1" id="box1"></div>
@@ -109,23 +61,6 @@ $(".hottip-group1").hotTip({
 });
 </pre>
 
-<h3>Structure</h3>
-<p>While you could position your hot tips</p>
-<pre>
-		$(".hottip-group1").hotTip({
-		parentId : "#pedal",
-		hotClass : "hottip-hot",
-		parentHot : "hottip-parent-hot",
-		backgroundClass : ".hottip-background",
-		backgroundCold : ".hottip-background-cold",
-		backgroundHot : ".hottip-background-hot",
-		listOfTips : [
-			{hotSpot : "box1", toolTip : "hottiptooltip1"},
-			{hotSpot : "box2", toolTip : "hottiptooltip2"},
-			{hotSpot : "box3", toolTip : "hottiptooltip3"}
-		]
-	});
-</pre>
 
 <table>
 <thead>
@@ -150,7 +85,7 @@ $(".hottip-group1").hotTip({
 		Working
 	</td>
 	<td>
-		Looks grand so it does.
+		Looks good.
 	</td>
 </tr>
 <tr>
@@ -161,7 +96,7 @@ $(".hottip-group1").hotTip({
 		Working
 	</td>
 	<td>
-		Also looks grand.
+		Looks good.
 	</td>
 </tr>
 <tr>
@@ -172,7 +107,7 @@ $(".hottip-group1").hotTip({
 		Working
 	</td>
 	<td>
-		Looks grand on iPhone, yet to test on the iPad.
+		Looks good on iPad. iPhone support will come next version.
 	</td>
 </tr>
 <tr>
@@ -183,7 +118,7 @@ $(".hottip-group1").hotTip({
 		Working
 	</td>
 	<td>
-		Oh so grand.
+		Lookin awesome.
 	</td>
 </tr>
 <tr>
@@ -194,7 +129,7 @@ $(".hottip-group1").hotTip({
 		Working
 	</td>
 	<td>
-		Testing on a random old FF version.
+		Works.
 	</td>
 </tr>
 <tr>
@@ -205,28 +140,28 @@ $(".hottip-group1").hotTip({
 		Working
 	</td>
 	<td>
-		I thought it wasn't gonna work but it does.
+		Works even on IE9
 	</td>
 </tr>
 <tr>
 	<td>
 		IE7/8
 	</td>
-	<td class="green">
-		Working
+	<td class="red">
+		Unknown
 	</td>
 	<td>
-		IE7 and 8 don't support media queries. They still load the appropriate images however as you can see in this demo. If you want to force media queries on these browsers however you can try <a href="https://github.com/scottjehl/Respond">Respond</a>.
+		Unknown. Not yes tested. 
 	</td>
 </tr>
 </tbody>
 </table>
 
-I would like to name check the <a href="http://www.toyota.de/cars/new_cars/auris/index.tmex" target="_blank">German Toyota</a> site which directly inspired this hotTip. 
+<p>I would like to name check the <a href="http://www.toyota.de/cars/new_cars/auris/index.tmex" target="_blank">German Toyota</a> site which directly inspired this hotTip.</p>
 
-     <h4>Plugins &amp; Stuff</h4>
+<h4>Plugins &amp; Stuff</h4>
 
-    <p>I'm going to list plugins and themes that use the script here. If you want your one added please drop me a line on <a href="http://twitter.com/matthewnolandev">Twitter</a>.</p>
+<p>I'm going to list plugins and themes that use the script here. If you want yours added please drop me a line on <a href="http://twitter.com/matthewnolandev">Twitter</a>.</p>
 
 
 <footer class="clearfix">
@@ -262,39 +197,6 @@ $(document).ready(function() {
 	});
 
 });
-
-//like this http://www.auris-hybrid.de/index_en.asp#/model   or   wechoosethemoon.org
-// post it here http://stackoverflow.com/questions/9306068/jquery-360-product-view-with-hotspots
-// this sux  https://github.com/allmarkedup/jQuery-Hotspot
-
-
-/// sorry guy   http://codecanyon.net/item/adddot-the-jquery-plugin-for-adding-hot-spots/1860111
-
-/*
-
-ready to launch: 
-
-Remove all CSS transition, and replace with IE safe jQuery
-
-
-jquerypicture.com
-
-
-
-
-add event hander instead of click
-
-add option to bubble a click through the dom
-
-replace the word hot with active
-
-make the list of hottips to iterate numerically 
-
-*/
-
-
-
-
 
 </script>
 </body>
